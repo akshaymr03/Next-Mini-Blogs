@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 // Mock data (in-memory array)
-let posts = [
+const posts = [
   {
     title: "First Post",
     slug: "first-post",

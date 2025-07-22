@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa"; // Optional: for icon
+import { Post } from "@/types/post";
 
-export default function PostCard({ post }: { post: any }) {
+export default function PostCard({ post }: { post: Post }) {
   return (
     <Link
       href={`/posts/${post.slug}`}

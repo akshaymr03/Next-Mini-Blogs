@@ -1,3 +1,5 @@
+import { Post } from "@/types/post";
+
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
@@ -14,7 +16,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   }
 
   const postData = await res.json();
-  const post = postData.find((p: any) => p.slug === slug);
+  const post = postData.find((p: Post) => p.slug === slug);
 
   if (!post) {
     return (

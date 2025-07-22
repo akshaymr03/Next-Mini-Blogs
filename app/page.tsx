@@ -1,4 +1,5 @@
 import PostCard from "@/components/PostCard";
+import { Post } from "@/types/post";
 
 export default async function HomePage() {
   const res = await fetch("http://localhost:3000/api/posts", {
@@ -15,7 +16,7 @@ export default async function HomePage() {
         <p className="text-center text-gray-500">No posts available. Be the first to create one!</p>
       ) : (
         <ul className="grid sm:grid-cols-2 gap-6">
-          {posts.map((post: any, index: number) => (
+          {posts.map((post: Post, index: number) => (
             <PostCard post={post} key={index} />
           ))}
         </ul>
