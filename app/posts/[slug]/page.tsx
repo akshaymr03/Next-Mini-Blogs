@@ -3,8 +3,9 @@ import { Post } from "@/types/post";
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
-  const res = await fetch(`http://localhost:3000/api/posts`, {
-    cache: "no-store", 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const res = await fetch(`${baseUrl}/api/posts`, {
+    cache: "no-store",
   });
 
   if (!res.ok) {

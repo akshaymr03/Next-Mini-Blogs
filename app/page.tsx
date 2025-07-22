@@ -2,7 +2,11 @@ import PostCard from "@/components/PostCard";
 import { Post } from "@/types/post";
 
 export default async function HomePage() {
-  const res = await fetch("http://localhost:3000/api/posts", {
+
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  console.log("Base URL:", baseUrl);
+  
+  const res = await fetch(`${baseUrl}/api/posts`, {
     cache: "no-store",
   });
   const posts = await res.json();
