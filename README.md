@@ -1,4 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Mini Blog
+
+A simple Next.js 13 project demonstrating dynamic routing, API routes, server-side rendering, and client-side forms — styled with Tailwind CSS.
+
+---
+
+## 🚀 Project Features
+
+- Display a list of blog posts on the homepage
+- View individual posts using dynamic routes (`/posts/[slug]`)
+- Create new posts via a client-side form with slug validation
+- REST API routes to fetch and add posts (`GET` and `POST`)
+- Server-Side Rendering (SSR) with no caching for up-to-date content
+- Middleware example for request logging
+- Styled using Tailwind CSS with modern UI/UX
+
+---
+
+## 🛠️ Setup Instructions
+
+### Prerequisites
+
+- Node.js v16 or higher
+- Package manager: npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone 
+cd nextjs-mini-blog
 
 ## Getting Started
 
